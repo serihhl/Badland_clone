@@ -7,6 +7,7 @@ public class character : MonoBehaviour
     public Vector2 direction = Vector2.up;
     Rigidbody2D rb;
     
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,9 +20,10 @@ public class character : MonoBehaviour
     
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current.spaceKey.isPressed)
         {
             flyingForward();
         }
+         
     }
 }
