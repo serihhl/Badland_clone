@@ -7,13 +7,15 @@ public class character : MonoBehaviour
     public Vector2 direction = Vector2.up;
     public float angularVelocity = 1f;
     public float angularDamping = 1f;
+    public float spinTimer = 5f;
     Rigidbody2D rb;
-    CircleCollider2D cc;
+    
     
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //rb.angularDamping = 4f;
     }
 
     public void flyingForward()
@@ -27,6 +29,12 @@ public class character : MonoBehaviour
         {
             flyingForward();
         }
+
+        spinTimer -= Time.deltaTime;
+        if (spinTimer <= 0f)
+        {
+            stopSpinning();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -34,5 +42,11 @@ public class character : MonoBehaviour
         rb.linearVelocity = direction.normalized * speed;
     }
 
-
+    void stopSpinning()
+    {
+        if (angularVelocity > 0f)
+        {
+            rb.angularDamping = 4f;
+        }
+    }
 }

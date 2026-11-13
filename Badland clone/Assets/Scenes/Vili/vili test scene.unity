@@ -462,7 +462,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 12
-  direction: {x: 0.45, y: 1}
+  direction: {x: 0.35, y: 0.6}
+  angularVelocity: 1
+  angularDamping: 1
+  spinTimer: 5
 --- !u!4 &1239536505
 Transform:
   m_ObjectHideFlags: 0
