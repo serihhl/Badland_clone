@@ -110,10 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beed6b31910346c47a1727133b9898d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bomb
-  force: 200
+  force: 250
   radius: 10
-  cha: {fileID: 0}
-  rb: {fileID: 0}
 --- !u!1 &7280484878376256219
 GameObject:
   m_ObjectHideFlags: 0
