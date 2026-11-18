@@ -52,4 +52,15 @@ public class character : MonoBehaviour
             transform.rotation = Quaternion.identity;
         }
     }
+
+    public void PickUpActivated(PickUpItemType pickup) {
+
+        if (pickup == PickUpItemType.BiggerChar) {
+            transform.localScale = new Vector2(2, 2);
+        }
+        else if (pickup == PickUpItemType.SmallerChar) {
+            transform.localScale = new Vector2(0.5f, 0.5f);
+        }
+
+    }
 }
