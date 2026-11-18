@@ -139,11 +139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 696d1c6d88d023e41a5e1150957c6046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  freeSpinTime: 2
   speed: 12
   direction: {x: 0.35, y: 0.6}
   angularVelocity: 1
-  angularDamping: 1
-  spinTimer: 5
+  angularDampingFactor: 1
+  autoSteerFactor: 90
 --- !u!50 &5314148411221485417
 Rigidbody2D:
   serializedVersion: 5
