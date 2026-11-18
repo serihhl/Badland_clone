@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 696d1c6d88d023e41a5e1150957c6046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  freeSpinTime: 2
+  freeSpinTime: 1
   speed: 12
   direction: {x: 0.35, y: 0.6}
   angularVelocity: 1
