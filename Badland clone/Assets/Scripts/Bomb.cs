@@ -5,7 +5,7 @@ public class Bomb : MonoBehaviour
 {
 
     public float force = 10f;
-    public Vector2 direction = Vector2.up;
+    public float radius = 8f;
     public GameObject cha;
     public Rigidbody2D rb;
 
@@ -16,13 +16,28 @@ public class Bomb : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
 
         Explosion();
-        Destroy(gameObject);
 
     }
 
     void Explosion() {
 
-        rb.AddForce(direction * force);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
+
+        foreach (Collider2D nearbyObject in colliders) {
+            Rigidbody2D rb = nearbyObject.GetComponent<Rigidbody2D>();
+            if (rb != null) {
+                Vector2 direction = (rb.transform.position - transform.position);
+                float distance = direction.magnitude;
+
+                // Calculate falloff so objects closer to the center get pushed harder
+                float falloff = 1 - (distance / radius);
+                if (falloff > 0) {
+                    rb.AddForce(direction.normalized * force * falloff, ForceMode2D.Impulse);
+                }
+            }
+        }
+
+        Destroy(gameObject);
 
     }
 
