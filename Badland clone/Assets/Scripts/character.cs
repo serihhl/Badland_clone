@@ -4,12 +4,14 @@ using UnityEngine.InputSystem;
 
 public class character : MonoBehaviour
 {
+    public float freeSpinTime = 2f;
     public float speed = 5f;
     public Vector2 direction = Vector2.up;
     //public Vector3 spinning = Vector3.zero;
     public float angularVelocity = 1f;
-    public float angularDamping = 1f;
-    public float spinTimer = 5f;
+    public float angularDampingFactor = 1f;
+    float spinTimer = 0f;
+    public float autoSteerFactor;
     Rigidbody2D rb;
     
     
@@ -30,17 +32,17 @@ public class character : MonoBehaviour
         {
             flyingForward();
         }
-        spinTimer -= Time.deltaTime;
-        if (spinTimer <= 0f)
-        {
-            stopSpinning();
-            rb.angularDamping = 1f;
-        }
+        spinTimer += Time.deltaTime;
+        rb.angularDamping = spinTimer * angularDampingFactor;
+        float t = Mathf.Min(spinTimer - freeSpinTime);
+        var rot = Quaternion.RotateTowards(transform.rotation, Quaternion.identity, t * autoSteerFactor * Time.deltaTime);
+        rb.SetRotation(rot);
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        rb.linearVelocity = direction.normalized * speed;
+        spinTimer = 0;
     }
 
     void stopSpinning()
