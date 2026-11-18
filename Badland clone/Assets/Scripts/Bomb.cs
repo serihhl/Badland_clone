@@ -6,8 +6,6 @@ public class Bomb : MonoBehaviour
 
     public float force = 10f;
     public float radius = 8f;
-    public GameObject cha;
-    public Rigidbody2D rb;
 
     private void Start() {
         
