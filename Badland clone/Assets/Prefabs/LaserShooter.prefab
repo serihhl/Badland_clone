@@ -119,7 +119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3364518245896255151}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.017428767, w: 0.9998481}
+  m_LocalRotation: {x: 0, y: 0, z: 0.01742624, w: 0.99984825}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Laser
   distanceRay: 100
-  laserFirePoint: {fileID: 0}
+  laserFirePoint: {fileID: 2740057523634811066}
   lineRenderer: {fileID: 1780536232607314406}
 --- !u!120 &1780536232607314406
 LineRenderer:
@@ -286,7 +286,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 7.57, y: -7.8}
+  m_Offset: {x: 0.03, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
