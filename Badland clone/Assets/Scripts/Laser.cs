@@ -7,11 +7,13 @@ public class Laser : MonoBehaviour
     public Transform laserFirePoint;
     public LineRenderer lineRenderer;
     public Collider2D cd;
+    
 
 
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        cd = GetComponent<Collider2D>();
         lineRenderer.positionCount = 2;
         lineRenderer.useWorldSpace = true;
     }
@@ -32,4 +34,5 @@ public class Laser : MonoBehaviour
             lineRenderer.SetPosition(1, laserFirePoint.position + transform.up * 100);
         }
     }
+    
 }
