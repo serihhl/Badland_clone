@@ -57,10 +57,10 @@ public class character : MonoBehaviour
     public void PickUpActivated(PickUpItemType pickup) {
 
         if (pickup == PickUpItemType.BiggerChar) {
-            transform.localScale = new Vector2(transform.localScale.x * 1.2f, transform.localScale.y * 1.2f);
+            transform.localScale = new Vector2(transform.localScale.x * 1.25f, transform.localScale.y * 1.25f);
         }
         else if (pickup == PickUpItemType.SmallerChar) {
-            transform.localScale = new Vector2(transform.localScale.x * 0.8f, transform.localScale.y * 0.8f);
+            transform.localScale = new Vector2(transform.localScale.x * 0.75f, transform.localScale.y * 0.75f);
         }
 
     }
