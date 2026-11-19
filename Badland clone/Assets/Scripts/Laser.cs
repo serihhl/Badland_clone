@@ -21,6 +21,7 @@ public class Laser : MonoBehaviour
     }
     void ShootLaser()
     {
+        lineRenderer.SetPosition(0, laserFirePoint.position);
         var result = Physics2D.Raycast(laserFirePoint.position, transform.up, distanceRay, hitLayers);
         if (result.collider != null)
         {
