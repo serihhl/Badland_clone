@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 45403e403777a2d4eb75c803e2a5a306
+guid: 38d77b12ab750a94094c5062dd99e00f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5673728295354373985
-    second: laserShooter (psd)_0
+      213: 6304413447409539967
+    second: laserShoot (psd)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: laserShooter (psd)_0
+      name: laserShoot (psd)_0
       rect:
         serializedVersion: 2
-        x: 2095
+        x: 2114
         y: 0
-        width: 373
-        height: 522
+        width: 328
+        height: 511
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,8 +117,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f98e1531d2ed241b0800000000000000
-      internalID: -5673728295354373985
+      spriteID: f7b9a02d0a6cd7750800000000000000
+      internalID: 6304413447409539967
       vertices: []
       indices: 
       edges: []
@@ -127,7 +127,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a94c38129b0cf0d47912f1b65ee1fcc9
+    spriteID: b0ea4288ec8443d49be19c6eb25975b1
     internalID: 0
     vertices: []
     indices: 
@@ -137,7 +137,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      laserShooter (psd)_0: -5673728295354373985
+      laserShoot (psd)_0: 6304413447409539967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
