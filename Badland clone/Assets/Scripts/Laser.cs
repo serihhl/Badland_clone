@@ -2,24 +2,34 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    public LayerMask layersToHit;
+    [SerializeField] private float distanceRay = 100;
+    public Transform laserFirePoint;
+    public LineRenderer lineRenderer;
+    Transform laserTransform;
 
-    void Update()
+    private void Awake()
     {
-        float angle = transform.eulerAngles.z * Mathf.Deg2Rad;
-        Vector2 dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 50f, layersToHit);
-        if(hit.collider == null)
+        laserTransform = GetComponent<Transform>();
+    }
+    private void Update()
+    {
+        ShootLaser();
+    }
+    void ShootLaser()
+    {
+        if(Physics2D.Raycast(laserTransform.position, transform.right))
         {
-            transform.localScale = new Vector3(50f, transform.localScale.y, 1);
-            return;
+            RaycastHit2D _hit = Physics2D.Raycast(laserTransform.position, transform.right);
+            Draw2DRay(laserFirePoint.position, _hit.point);
         }
-        transform.localScale = new Vector3(hit.distance, transform.localScale.y, 1);
-        Debug.Log(hit.collider.gameObject.name);
-        if(hit.collider.tag == "Player")
+        else
         {
-            Destroy(hit.collider.gameObject);
+            Draw2DRay(laserFirePoint.position, laserFirePoint.transform.right * distanceRay);
         }
+    }
+    void Draw2DRay(Vector2 startPos, Vector2 endPos)
+    {
+        lineRenderer.SetPosition(0, startPos);
+        lineRenderer.SetPosition(1, endPos);
     }
 }
