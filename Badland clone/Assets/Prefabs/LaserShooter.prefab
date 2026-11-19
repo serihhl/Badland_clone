@@ -103,6 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8598983403087420567}
   - component: {fileID: 5264406144481654620}
+  - component: {fileID: 2791836221294494425}
   m_Layer: 0
   m_Name: laserShoot (psd)_0
   m_TagString: Untagged
@@ -185,6 +186,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!61 &2791836221294494425
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2281792143979280739}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.0000017881393, y: 11.83}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.2808008, y: 5.11}
+    newSize: {x: 30.007326, y: 20}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.48, y: 22.6}
+  m_EdgeRadius: 0
 --- !u!1 &3364518245896255151
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +326,7 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 0.041770935
         value: 1
         inSlope: 0
         outSlope: 0
@@ -389,5 +436,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Laser
   distanceRay: 100
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 576
   laserFirePoint: {fileID: 8598983403087420567}
   lineRenderer: {fileID: 1780536232607314406}
+  cd: {fileID: 2791836221294494425}
