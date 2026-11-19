@@ -3,34 +3,32 @@ using System.Collections.Generic;
 public class Laser : MonoBehaviour
 {
     [SerializeField] float distanceRay = 100;
+    public LayerMask hitLayers;
     public Transform laserFirePoint;
     public LineRenderer lineRenderer;
-    Transform laserTransform;
+    public Collider2D cd;
+
 
     private void Awake()
     {
-        laserTransform = GetComponent<Transform>();
+        lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.positionCount = 2;
+        lineRenderer.useWorldSpace = true;
     }
     private void Update()
     {
         ShootLaser();
     }
     void ShootLaser()
-    { 
-    //    if(Physics2D.Raycast(laserTransform.position, transform.right))
-    //    {
-    //        RaycastHit2D _hit = Physics2D.Raycast(laserTransform.position, transform.right);
-    //        Draw2DRay(laserFirePoint.position, _hit.point);
-    //    }
-    //    else
-    //    {
-            Draw2DRay(laserFirePoint.position, laserFirePoint.transform.up * distanceRay);
-        //}
-    }
-    void Draw2DRay(Vector2 startPos, Vector2 endPos)
     {
-        startPos = laserFirePoint.transform.position;
-        endPos = transform.position * distanceRay;
-         
+        var result = Physics2D.Raycast(laserFirePoint.position, transform.up, distanceRay, hitLayers);
+        if (result.collider != null)
+        {
+            lineRenderer.SetPosition(1, result.point);
+        }
+        else
+        {
+            lineRenderer.SetPosition(1, laserFirePoint.position + transform.up * 100);
+        }
     }
 }
