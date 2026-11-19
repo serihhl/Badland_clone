@@ -27,7 +27,6 @@ public class Bomb : MonoBehaviour
                 Vector2 direction = (rb.transform.position - transform.position);
                 float distance = direction.magnitude;
 
-                // Calculate falloff so objects closer to the center get pushed harder
                 float falloff = 1 - (distance / radius);
                 if (falloff > 0) {
                     rb.AddForce(direction.normalized * force * falloff, ForceMode2D.Impulse);
@@ -36,6 +35,12 @@ public class Bomb : MonoBehaviour
         }
 
         Destroy(gameObject);
+
+    }
+
+    private void OnDrawGizmos() {
+
+        Gizmos.DrawWireSphere(transform.position, radius);
 
     }
 

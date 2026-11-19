@@ -58,9 +58,11 @@ public class character : MonoBehaviour
 
         if (pickup == PickUpItemType.BiggerChar) {
             transform.localScale = new Vector2(transform.localScale.x * 1.25f, transform.localScale.y * 1.25f);
+            Physics2D.gravity = new Vector2(Physics2D.gravity.x * 1.25f, Physics2D.gravity.y * 1.25f);
         }
         else if (pickup == PickUpItemType.SmallerChar) {
             transform.localScale = new Vector2(transform.localScale.x * 0.75f, transform.localScale.y * 0.75f);
+            Physics2D.gravity = new Vector2(Physics2D.gravity.x * 0.85f, Physics2D.gravity.y * 0.85f);
         }
 
     }
