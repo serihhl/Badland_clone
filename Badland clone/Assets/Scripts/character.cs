@@ -12,6 +12,7 @@ public class character : MonoBehaviour
     float spinTimer = 0f;
     public float autoSteerFactor;
     Rigidbody2D rb;
+    Vector2 scale;
     
     
     
@@ -56,10 +57,10 @@ public class character : MonoBehaviour
     public void PickUpActivated(PickUpItemType pickup) {
 
         if (pickup == PickUpItemType.BiggerChar) {
-            transform.localScale = new Vector2(2, 2);
+            transform.localScale = new Vector2(transform.localScale.x * 1.2f, transform.localScale.y * 1.2f);
         }
         else if (pickup == PickUpItemType.SmallerChar) {
-            transform.localScale = new Vector2(0.5f, 0.5f);
+            transform.localScale = new Vector2(transform.localScale.x * 0.8f, transform.localScale.y * 0.8f);
         }
 
     }
