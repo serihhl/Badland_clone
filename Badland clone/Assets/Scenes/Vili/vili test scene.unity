@@ -542,13 +542,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1857334466791625863, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
+      propertyPath: collider
+      value: 
+      objectReference: {fileID: 1762689816}
     - target: {fileID: 1930454333634073964, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.910984
       objectReference: {fileID: 0}
     - target: {fileID: 1930454333634073964, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.406656
+      value: 12.91
       objectReference: {fileID: 0}
     - target: {fileID: 1930454333634073964, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
       propertyPath: m_LocalPosition.z
@@ -582,17 +586,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3060737515791853723, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5218348228527003065, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
       propertyPath: m_Name
       value: Sirkkel
       objectReference: {fileID: 0}
     - target: {fileID: 8541393785221403230, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
       propertyPath: m_Radius
-      value: 4.34
+      value: 4.38
       objectReference: {fileID: 0}
     - target: {fileID: 8541393785221403230, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -894,6 +902,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 125.2, y: 1.79}
   m_EdgeRadius: 0
+--- !u!58 &1762689816 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8541393785221403230, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
+  m_PrefabInstance: {fileID: 751311339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1817251009
 GameObject:
   m_ObjectHideFlags: 0
