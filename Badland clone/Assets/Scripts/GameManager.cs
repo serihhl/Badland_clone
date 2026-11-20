@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     character character;
     public List<PickUpItemType> charaterItems;
+    public GameObject[] damagingObjects;
     
     public void PickUpActivated(PickUpItemType pickup) {
 

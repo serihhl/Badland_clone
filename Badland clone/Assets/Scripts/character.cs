@@ -13,12 +13,14 @@ public class character : MonoBehaviour
     public float autoSteerFactor;
     Rigidbody2D rb;
     Vector2 scale;
+    GameManager gm;
     
     
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        gm = FindAnyObjectByType<GameManager>();
     }
 
     public void flyingForward()
@@ -43,17 +45,8 @@ public class character : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         spinTimer = 0;
+        
     }
-
-    void stopSpinning()
-    { 
-        if (angularVelocity > 0f)
-        {
-            rb.angularDamping = 4f;
-            transform.rotation = Quaternion.identity;
-        }
-    }
-
     public void PickUpActivated(PickUpItemType pickup) {
 
         if (pickup == PickUpItemType.BiggerChar) {
