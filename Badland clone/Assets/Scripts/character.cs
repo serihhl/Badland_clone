@@ -2,7 +2,7 @@ using System.Reflection.Metadata.Ecma335;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class character : MonoBehaviour
+public class character : MonoBehaviour, IDamageable
 {
     public float freeSpinTime = 2f;
     public float speed = 5f;
@@ -13,12 +13,14 @@ public class character : MonoBehaviour
     public float autoSteerFactor;
     Rigidbody2D rb;
     Vector2 scale;
+    GameManager gm;
     
     
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        gm = FindAnyObjectByType<GameManager>();
     }
 
     public void flyingForward()
@@ -43,17 +45,8 @@ public class character : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         spinTimer = 0;
+       
     }
-
-    void stopSpinning()
-    { 
-        if (angularVelocity > 0f)
-        {
-            rb.angularDamping = 4f;
-            transform.rotation = Quaternion.identity;
-        }
-    }
-
     public void PickUpActivated(PickUpItemType pickup) {
 
         if (pickup == PickUpItemType.BiggerChar) {
@@ -65,5 +58,9 @@ public class character : MonoBehaviour
             Physics2D.gravity = new Vector2(Physics2D.gravity.x * 0.85f, Physics2D.gravity.y * 0.85f);
         }
 
+    }
+    public void TakeDamage(float damage)
+    {
+        Destroy(gameObject);
     }
 }
