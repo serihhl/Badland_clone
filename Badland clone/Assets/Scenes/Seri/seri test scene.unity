@@ -594,6 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   charaterItems: 0100000002000000i
+  damagingObjects: []
 --- !u!4 &1583353366
 Transform:
   m_ObjectHideFlags: 0
