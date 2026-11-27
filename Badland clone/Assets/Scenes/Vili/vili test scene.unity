@@ -546,6 +546,10 @@ PrefabInstance:
       propertyPath: collider
       value: 
       objectReference: {fileID: 1762689816}
+    - target: {fileID: 1857334466791625863, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1688322777}
     - target: {fileID: 1930454333634073964, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.910984
@@ -593,6 +597,10 @@ PrefabInstance:
     - target: {fileID: 5218348228527003065, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
       propertyPath: m_Name
       value: Sirkkel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218348228527003065, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
+      propertyPath: m_TagString
+      value: Damaging
       objectReference: {fileID: 0}
     - target: {fileID: 8541393785221403230, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
       propertyPath: m_Radius
@@ -920,6 +928,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 125.2, y: 1.79}
   m_EdgeRadius: 0
+--- !u!1 &1688322777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4851483249892468967, guid: c49935dbd12afea439ed5d1cd6e32a51, type: 3}
+  m_PrefabInstance: {fileID: 9169828473371519327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1749117311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2281792143979280739, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
@@ -997,11 +1010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1919884476880390165, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.93
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 1919884476880390165, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1919884476880390165, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1045,7 +1058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2791836221294494425, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2791836221294494425, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
