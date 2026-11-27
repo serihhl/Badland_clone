@@ -6,13 +6,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     public float speed = 10f;
     public Collider2D collider;
-    public GameObject character;
-    void OnTriggerEnter(Collider character)
-    {
-        Destroy(character.gameObject);
-    }
-
-
     void Update()
     {
         transform.Rotate(0, 0, 50 * Time.deltaTime * speed);
