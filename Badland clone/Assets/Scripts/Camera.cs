@@ -4,12 +4,14 @@ using UnityEngine.InputSystem;
 
 public class Camera : MonoBehaviour
 {
-    public float Speed = 1f;
-    public Vector3 Direction = Vector3.right;
+    public float speed = 1f;
+    public Vector3 direction = Vector3.right;
 
     private void Update() {
 
-        transform.localPosition = Direction * Speed;
+        var p = transform.position;
+        p.x = speed * Time.deltaTime;
+        transform.position += direction * p.x;
 
     }
 }

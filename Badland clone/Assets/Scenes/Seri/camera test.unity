@@ -1090,7 +1090,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 18.130024
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -1194,8 +1194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7a142877fcc04b94d5bedf281231a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Camera
-  Speed: 8.53
-  Direction: {x: 1, y: 0, z: 0}
+  speed: 2
+  direction: {x: 1, y: 0, z: 0}
 --- !u!1 &1801524653
 GameObject:
   m_ObjectHideFlags: 0
