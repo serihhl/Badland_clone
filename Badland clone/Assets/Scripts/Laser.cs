@@ -7,6 +7,7 @@ public class Laser : MonoBehaviour
     public Transform laserFirePoint;
     public LineRenderer lineRenderer;
     public Collider2D cd;
+    [SerializeField] GameObject laserPrefab;
     
 
 
@@ -23,6 +24,7 @@ public class Laser : MonoBehaviour
     }
     void ShootLaser()
     {
+        Instantiate(laserPrefab);
         lineRenderer.SetPosition(0, laserFirePoint.position);
         var result = Physics2D.Raycast(laserFirePoint.position, transform.up, distanceRay, hitLayers);
         if (result.collider != null)
