@@ -1,8 +1,9 @@
 using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class character : MonoBehaviour, IDamageable
+public class character : MonoBehaviour
 {
     public float freeSpinTime = 2f;
     public float speed = 5f;
@@ -14,10 +15,7 @@ public class character : MonoBehaviour, IDamageable
     Rigidbody2D rb;
     Vector2 scale;
     GameManager gm;
-    [SerializeField] float hp;
-    
-    
-    
+   
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -42,17 +40,15 @@ public class character : MonoBehaviour, IDamageable
         rb.SetRotation(rot);
         
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        spinTimer = 0;
-        if (collision.gameObject.tag == "Damaging")
+        if (collision.gameObject.CompareTag("Damaging"))
         {
             Destroy(gameObject);
-            Debug.Log("MiuMau");
         }
-       
     }
+
+
     public void PickUpActivated(PickUpItemType pickup) {
 
         if (pickup == PickUpItemType.BiggerChar) {
@@ -65,12 +61,5 @@ public class character : MonoBehaviour, IDamageable
         }
 
     }
-    public void TakeDamage(float damage)
-    {
-        hp -= damage;
-        if (hp <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+   
 }
