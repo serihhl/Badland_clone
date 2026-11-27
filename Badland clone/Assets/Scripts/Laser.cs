@@ -1,5 +1,7 @@
-using UnityEngine;
 using System.Collections.Generic;
+using System.Reflection;
+using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 public class Laser : MonoBehaviour
 {
     [SerializeField] float distanceRay = 100;
@@ -24,7 +26,6 @@ public class Laser : MonoBehaviour
     }
     void ShootLaser()
     {
-        Instantiate(laserPrefab);
         lineRenderer.SetPosition(0, laserFirePoint.position);
         var result = Physics2D.Raycast(laserFirePoint.position, transform.up, distanceRay, hitLayers);
         if (result.collider != null)

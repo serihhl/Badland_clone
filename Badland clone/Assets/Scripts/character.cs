@@ -14,6 +14,7 @@ public class character : MonoBehaviour, IDamageable
     Rigidbody2D rb;
     Vector2 scale;
     GameManager gm;
+    [SerializeField] float hp;
     
     
     
@@ -45,6 +46,11 @@ public class character : MonoBehaviour, IDamageable
     private void OnCollisionEnter2D(Collision2D collision)
     {
         spinTimer = 0;
+        if (collision.gameObject.tag == "Damaging")
+        {
+            Destroy(gameObject);
+            Debug.Log("MiuMau");
+        }
        
     }
     public void PickUpActivated(PickUpItemType pickup) {
@@ -61,6 +67,10 @@ public class character : MonoBehaviour, IDamageable
     }
     public void TakeDamage(float damage)
     {
-        Destroy(gameObject);
+        hp -= damage;
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

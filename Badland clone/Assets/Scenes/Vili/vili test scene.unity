@@ -920,6 +920,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 125.2, y: 1.79}
   m_EdgeRadius: 0
+--- !u!1 &1749117311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2281792143979280739, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
+  m_PrefabInstance: {fileID: 4783910904095041978}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1749117315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749117311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c56b5ab7def756e44a75b130f8962875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaserBeam
 --- !u!58 &1762689816 stripped
 CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 8541393785221403230, guid: f91dd0178e6e93747aae7ac768d46287, type: 3}
@@ -966,6 +983,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8369973347500856202, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
+      propertyPath: cd
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -8369973347500856202, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
+      propertyPath: laserPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -8369973347500856202, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
+      propertyPath: lineRenderer
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1919884476880390165, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.93
@@ -1006,6 +1035,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -89.17
       objectReference: {fileID: 0}
+    - target: {fileID: 2281792143979280739, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
+      propertyPath: m_TagString
+      value: Damaging
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791836221294494425, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2791836221294494425, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1022,10 +1059,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserShooter
       objectReference: {fileID: 0}
+    - target: {fileID: 7946052479998567423, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2281792143979280739, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1749117315}
   m_SourcePrefab: {fileID: 100100000, guid: 92dc03ed2ec73194c93fb6d339eaf95b, type: 3}
 --- !u!1001 &9169828473371519327
 PrefabInstance:
@@ -1038,6 +1082,10 @@ PrefabInstance:
     - target: {fileID: 791930347437245741, guid: c49935dbd12afea439ed5d1cd6e32a51, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849154969064632671, guid: c49935dbd12afea439ed5d1cd6e32a51, type: 3}
+      propertyPath: hp
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2849154969064632671, guid: c49935dbd12afea439ed5d1cd6e32a51, type: 3}
       propertyPath: spinTimer
