@@ -42,6 +42,7 @@ public class character : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
+        spinTimer = 0;
         if (collision.gameObject.CompareTag("Damaging"))
         {
             Destroy(gameObject);
